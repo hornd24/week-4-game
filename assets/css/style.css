@@ -1,0 +1,37 @@
+body{
+    background: url("http://img04.deviantart.net/7863/i/2015/106/e/f/star_wars_7_wallpaper_trailer_2_by_ismaelart-d8pxlal.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+#main-img{width: 300px;
+    height: 200px ;
+    opacity: .75;
+
+}
+#rules{border-width: 5px;
+    color:red;
+    border-style: double;
+    background-color: black
+    
+}
+#num{
+    color: red;
+    border: red;
+    border-width: 5px;
+    border-style: outset;
+    border-style: inset;
+    background-color: black;
+}
+
+#counter1{
+width: 100px;
+}
+#counter2{
+    width: 100px;
+    }
+#counter3{
+    height: 100px;
+        width: 100px;
+        }
