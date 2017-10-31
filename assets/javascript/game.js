@@ -68,7 +68,7 @@ $('#counter1').on('click',function() {
     document.getElementById('score').textContent = 'Your Total Score: ' + numbersSum;
     
     ifYouWon();
-$
+reset();
     
     console.log(pictureNumbers[0])
     // click()
@@ -80,7 +80,7 @@ $('#counter2').on('click',function() {
     numbersSum += pictureNumbers[1]
     document.getElementById('score').textContent = 'Your Total Score: ' + numbersSum;
     ifYouWon();
-
+    reset();
     
     console.log(pictureNumbers[1])
 // use click function here
@@ -91,6 +91,7 @@ $('#counter2').on('click',function() {
     document.getElementById('score').textContent = 'Your Total Score: ' + numbersSum;
     console.log(pictureNumbers[2])
     ifYouWon();
+    reset();
     // use click function here
 });
 
