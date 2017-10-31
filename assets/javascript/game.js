@@ -96,8 +96,13 @@ $('#counter2').on('click',function() {
 
 
 $('#main-img').on('click',function() {
+
     audio.play();
     
-    alert('Danger Zone!')
+    $('#danger').html('You Have Entered The Danger Zone!')
    
 });
+
+$('#main-img').on('click',function(){
+    audio.stop();
+})
