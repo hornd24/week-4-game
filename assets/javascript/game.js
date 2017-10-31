@@ -4,7 +4,7 @@ var counter = 0;
 var numbersSum = 0;
 var pictureNumbers = [];
 randomNum = 0;
-
+var audio = new Audio('assets/Audio/TOP GUN -DANGER ZONE.mp3');
 
 // var audioElement = document.createElement("audio");
 // audioElement.setAttribute(src ="https://soundcloud.com/kennyloggins/danger-zone");
@@ -23,7 +23,7 @@ var start = function() {
 
 };
 
-var i = function() {
+var ifYouWon = function() {
     if( numbersSum === randomNum) {
         alert('you won ');
         wins++;
@@ -56,18 +56,18 @@ start();
 displayRandomNum();
 
 } 
-
+console.log(randomNum)
 $(document).ready(function() { });
 
 reset();
-i();
+console.log(randomNum)
 // S
 
 $('#counter1').on('click',function() {
     numbersSum += pictureNumbers[0];
     document.getElementById('score').textContent = 'Your Total Score: ' + numbersSum;
     
-
+    ifYouWon();
 $
     
     console.log(pictureNumbers[0])
@@ -79,7 +79,7 @@ $
 $('#counter2').on('click',function() {
     numbersSum += pictureNumbers[1]
     document.getElementById('score').textContent = 'Your Total Score: ' + numbersSum;
-    
+    ifYouWon();
 
     
     console.log(pictureNumbers[1])
@@ -90,12 +90,14 @@ $('#counter2').on('click',function() {
     numbersSum += pictureNumbers[2]
     document.getElementById('score').textContent = 'Your Total Score: ' + numbersSum;
     console.log(pictureNumbers[2])
-
+    ifYouWon();
     // use click function here
 });
 
 
 $('#main-img').on('click',function() {
-    alert('Danger Zone!')
+    audio.play();
     
+    alert('Danger Zone!')
+   
 });
