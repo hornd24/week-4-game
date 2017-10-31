@@ -16,13 +16,16 @@ body{
     background-color: black
     
 }
-#num{
+/* #num{
     color: red;
     border: red;
     border-width: 5px;
     border-style: outset;
     border-style: inset;
     background-color: black;
+} */
+#num{ 
+    color:black;
 }
 
 #counter1{
