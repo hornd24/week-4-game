@@ -23,7 +23,19 @@ var start = function() {
 
 };
 
-
+var i = function() {
+    if( numbersSum === randomNum) {
+        alert('you won ');
+        wins++;
+        
+    
+    
+    }
+    else if(numbersSum > randomNum){
+    alert('You Lost')
+    loses++
+    }
+    }
 
 var randomNum = Math.floor(Math.random() *50)
 console.log(randomNum)
@@ -48,7 +60,8 @@ displayRandomNum();
 $(document).ready(function() { });
 
 reset();
-
+i();
+// S
 
 $('#counter1').on('click',function() {
     numbersSum += pictureNumbers[0];
@@ -86,10 +99,3 @@ $('#main-img').on('click',function() {
     alert('Danger Zone!')
     
 });
-
-if( numbersSum === randomNum) {
-    alert('you won ');
-    
-
-
-}
