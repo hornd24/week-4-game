@@ -3,9 +3,9 @@ var loses = 0;
 var counter = 0;
 var numbersSum = 0;
 var pictureNumbers = [];
-randomNum = 0;
+var randomNum = 0;
 var audio = new Audio('assets/Audio/TOP GUN -DANGER ZONE.mp3');
-
+var hotdog = new Audio('assets/Audio/TOP GUN -DANGER ZONE.mp3');
 // var audioElement = document.createElement("audio");
 // audioElement.setAttribute(src ="https://soundcloud.com/kennyloggins/danger-zone");
 var start = function() {
@@ -20,13 +20,14 @@ var start = function() {
  var random3 =  Math.floor(Math.random()*10);
  pictureNumbers.push(random3)
  console.log(pictureNumbers);
-
+  randomNum = Math.floor(Math.random() *50)
 };
 
 var ifYouWon = function() {
     if( numbersSum === randomNum) {
         alert('you won ');
         wins++;
+        reset();
         
     
     
@@ -34,10 +35,11 @@ var ifYouWon = function() {
     else if(numbersSum > randomNum){
     alert('You Lost')
     loses++
+    reset();
     }
     }
 
-var randomNum = Math.floor(Math.random() *50)
+
 console.log(randomNum)
 
 var displayRandomNum = function() {
@@ -50,7 +52,7 @@ var score = function () {
 };
 
 var reset = function () {
-var numbersSum = 0;
+ numbersSum = 0;
 score();
 start();
 displayRandomNum();
@@ -65,10 +67,10 @@ console.log(randomNum)
 
 $('#counter1').on('click',function() {
     numbersSum += pictureNumbers[0];
-    document.getElementById('score').textContent = 'Your Total Score: ' + numbersSum;
-    
+   
+    $("#score").html("Your Total Score: " + numbersSum);
     ifYouWon();
-reset();
+
     
     console.log(pictureNumbers[0])
     // click()
@@ -80,7 +82,7 @@ $('#counter2').on('click',function() {
     numbersSum += pictureNumbers[1]
     document.getElementById('score').textContent = 'Your Total Score: ' + numbersSum;
     ifYouWon();
-    reset();
+    
     
     console.log(pictureNumbers[1])
 // use click function here
@@ -91,19 +93,25 @@ $('#counter2').on('click',function() {
     document.getElementById('score').textContent = 'Your Total Score: ' + numbersSum;
     console.log(pictureNumbers[2])
     ifYouWon();
-    reset();
+    
     // use click function here
 });
 
-
+var isPlaying = false;
 $('#main-img').on('click',function() {
 
-    audio.play();
-    
-    $('#danger').html('You Have Entered The Danger Zone!')
+   
+    if(isPlaying){
+        audio.pause();
+        isPlaying=false;
+    }
+    else{
+        audio.play();
+        isPlaying=true;
+        setTimeout(function(){
+            hotdog.play()},2000)
+    }
+    $('#danger').html('You Have Entered The Danger Zone!');
    
 });
 
-$('#main-img').on('click',function(){
-    audio.stop();
-})
