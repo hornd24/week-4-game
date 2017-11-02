@@ -114,8 +114,27 @@ setTimeout(function(){
     setTimeout(function(){
         $('#main-img').attr('src','http://i342.photobucket.com/albums/o403/pos3000/Gifs/archer-dolphin1.gif')}
         ,9000)
-    
-          http://i342.photobucket.com/albums/o403/pos3000/Gifs/archer-dolphin1.gif
+        
+        
+            setTimeout(function(){
+                $('#main-img').attr('src','https://m.popkey.co/bf120d/vkEX7.gif')}
+                ,12000)
+                setTimeout(function(){
+                    $('#main-img').attr('src','https://uproxx.files.wordpress.com/2016/03/ezgif-com-crop-11.gif?w=650')}
+                    ,15000)  
+       
+                    setTimeout(function(){
+                        $('#main-img').attr('src','http://dissmiss.com/blog/wp-content/uploads/2011/02/20110210-121537.jpg')}
+                        ,17000) 
+                        setTimeout(function(){
+                            $('#main-img').attr('src','https://media.tenor.com/images/461f43f931a034b7340095901594261f/tenor.gif')}
+                            ,18000) 
+                            setTimeout(function(){
+                                $('#main-img').attr('src','https://i0.wp.com/media0.giphy.com/media/e3FaCx7T425qg/giphy.gif')}
+                                ,21000) 
+                                setTimeout(function(){
+                                    $('#main-img').attr('src','https://thehyperbolicgamer.files.wordpress.com/2014/10/dangerzonearcher.gif')}
+                                    ,26000) 
     if(isPlaying){
         audio.pause();
         isPlaying=false;
@@ -130,6 +149,9 @@ setTimeout(function(){
     setTimeout(function(){
       $('#top-gun').attr('src','https://i.kinja-img.com/gawker-media/image/upload/s--8LMMVKsv--/c_scale,f_auto,fl_progressive,q_80,w_800/l2nthbcqmjl8qrhfcble.gif')}
             ,3000)
-           
-});
+            setTimeout(function(){
+                $('#top-gun').hide}
+                      ,10000)
+                     
+})
 
