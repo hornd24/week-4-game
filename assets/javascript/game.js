@@ -1,11 +1,11 @@
 var wins = 0;
-var loses = 0;
+var losses = 0;
 var counter = 0;
 var numbersSum = 0;
 var pictureNumbers = [];
 var randomNum = 0;
 var audio = new Audio('assets/Audio/TOP GUN -DANGER ZONE.mp3');
-var hotdog = new Audio('assets/Audio/TOP GUN -DANGER ZONE.mp3');
+
 // var audioElement = document.createElement("audio");
 // audioElement.setAttribute(src ="https://soundcloud.com/kennyloggins/danger-zone");
 var start = function() {
@@ -27,6 +27,7 @@ var ifYouWon = function() {
     if( numbersSum === randomNum) {
         alert('you won ');
         wins++;
+        $('#wins').html('Wins: ' + wins);
         reset();
         
     
@@ -34,13 +35,19 @@ var ifYouWon = function() {
     }
     else if(numbersSum > randomNum){
     alert('You Lost')
-    loses++
+   
+    
+    losses++
+    $('#losses').html('Losses: '+ losses);
     reset();
     }
     }
 
 
 console.log(randomNum)
+
+    $('#losses').html('Losses: '+ wins)
+
 
 var displayRandomNum = function() {
     document.getElementById('num').innerHTML = 'Random Number: ' + randomNum;
@@ -100,7 +107,7 @@ $('#counter2').on('click',function() {
 var isPlaying = false;
 $('#main-img').on('click',function() {
 
-   
+$("#main-img").attr("src","https://media1.tenor.com/images/541a821436d75b4276572239342c57ae/tenor.gif?itemid=5448070");
     if(isPlaying){
         audio.pause();
         isPlaying=false;
@@ -108,8 +115,8 @@ $('#main-img').on('click',function() {
     else{
         audio.play();
         isPlaying=true;
-        setTimeout(function(){
-            hotdog.play()},2000)
+        // setTimeout(function(){
+        //     hotdog.play()},2000)
     }
     $('#danger').html('You Have Entered The Danger Zone!');
    
