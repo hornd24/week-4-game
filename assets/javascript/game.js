@@ -106,8 +106,11 @@ $('#counter2').on('click',function() {
 
 var isPlaying = false;
 $('#main-img').on('click',function() {
-
+    $('#top-gun').attr('src','https://media.tenor.com/images/150cdc742f991ed4873751980c68e5a0/tenor.gif')
 $("#main-img").attr("src","https://media1.tenor.com/images/541a821436d75b4276572239342c57ae/tenor.gif?itemid=5448070");
+setTimeout(function(){
+    $('#top-gun').attr('src','https://s-media-cache-ak0.pinimg.com/originals/b3/4a/93/b34a9357fe63c72d93a130d2ac7b425f.gif')}
+          ,7000)
     if(isPlaying){
         audio.pause();
         isPlaying=false;
@@ -119,6 +122,9 @@ $("#main-img").attr("src","https://media1.tenor.com/images/541a821436d75b4276572
         //     hotdog.play()},2000)
     }
     $('#danger').html('You Have Entered The Danger Zone!');
-   
+    setTimeout(function(){
+      $('#top-gun').attr('src','https://i.kinja-img.com/gawker-media/image/upload/s--8LMMVKsv--/c_scale,f_auto,fl_progressive,q_80,w_800/l2nthbcqmjl8qrhfcble.gif')}
+            ,3000)
+           
 });
 
