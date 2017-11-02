@@ -111,6 +111,11 @@ $("#main-img").attr("src","https://media1.tenor.com/images/541a821436d75b4276572
 setTimeout(function(){
     $('#top-gun').attr('src','https://s-media-cache-ak0.pinimg.com/originals/b3/4a/93/b34a9357fe63c72d93a130d2ac7b425f.gif')}
           ,7000)
+    setTimeout(function(){
+        $('#main-img').attr('src','http://i342.photobucket.com/albums/o403/pos3000/Gifs/archer-dolphin1.gif')}
+        ,9000)
+    
+          http://i342.photobucket.com/albums/o403/pos3000/Gifs/archer-dolphin1.gif
     if(isPlaying){
         audio.pause();
         isPlaying=false;
