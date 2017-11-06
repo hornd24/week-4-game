@@ -60,6 +60,7 @@ width: 100px;
   }
   [class*="col-"] {
     width: 100%;
+  }
   
   @media only screen and (min-width: 460px) {
     /* For desktop: */
