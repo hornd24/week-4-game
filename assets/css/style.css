@@ -58,6 +58,8 @@ width: 100px;
   #score{
       color: whitesmoke;
   }
+  [class*="col-"] {
+    width: 100%;
   
   @media only screen and (min-width: 460px) {
     /* For desktop: */
